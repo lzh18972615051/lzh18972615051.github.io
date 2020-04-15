@@ -10,7 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="1.序上次看在知乎上看到一篇关于c语言的搞笑代码
+1234#define （  (#define  ）  )#define ture true#define flase false
+当时看完瞬间笑喷,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -60,7 +62,27 @@
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="1-序"><a href="#1-序" class="headerlink" title="1.序"></a>1.序</h2><p>上次看在知乎上看到一篇关于c语言的搞笑代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#define （  (</span><br><span class="line">#define  ）  )</span><br><span class="line">#define ture true</span><br><span class="line">#define flase false</span><br></pre></td></tr></table></figure>
+<p>当时看完瞬间笑喷了，这段代码显然是为了防止初学者因为<strong>中英文符号</strong>不分而进行的优化。</p>
+<p>但是笑完之后，我不禁陷入了深深的思考为什么“–…-….-…-/–..—.-..—./–..-.-..——/-…—–…-..-/-…——.-…./–.–…..-.-../-…——.–..-/-..—..-..-…/-.–..-.—–.-/-.-.-…–…-./——–….–../-.—…-…-.-/—…-..–.–./–…..—-..–/-.-..-…–…./-..—.-….–./-..—………/-..—…-.-.-./-.——.-.—./-..——-….-/-.-…-.–.–../-..—-…-.—/-.-..——.—/—.–.-….-../—–.-..-…../–..—.-.-…./——–….–../-.-.-.-.-..-.-./-.-.-..–..-…/-.-.-..–..-…/-.-.-..–..-…/-.-.-..–..-…/-.-.-..–..-…/-.-.-..–..-…/-.-.-.-.-..-.-./-.-.-..–..-…/-.-.-..–..-…/-.-.-..–..-…/-.-.-..–..-…/-.-.-..–..-…”咳咳，这里就当我凑一下字数了写文章不易希望大家理解。</p>
+<p>下面开始我们今天的正题：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200402154554588.jpg" alt="在这里插入图片描述"></p>
+<h2 id="2-C语言中文编程"><a href="#2-C语言中文编程" class="headerlink" title="2.C语言中文编程"></a>2.C语言中文编程</h2><p>学习过c，java这些编程语言后，我们大家肯定都有一些困惑，为什么编程语言都是英文编程呢，有没有中文编程语言的存在？</p>
+<p>答案：显然是有的，比如<strong>易语言</strong>，当然这里就不过多的介绍了，啰嗦了这么久，我们是时候开始进入c语言编程了</p>
+<h4 id="2-1原理介绍"><a href="#2-1原理介绍" class="headerlink" title="2.1原理介绍"></a>2.1原理介绍</h4><p>由于现在的标准C是支持<strong>中文字符</strong>的，而巧的是c语言是拥有<code>#define</code>语句的</p>
+<p>那么我们就可以这样做了：<br><img src="https://img-blog.csdnimg.cn/20200402155113701.gif" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>简单版：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#define 控制台 printf</span><br><span class="line">#define 输出 (</span><br><span class="line">#define 这句话 );</span><br><span class="line">#define 好了可以停止运行了 return 0;</span><br><span class="line">int main() </span><br><span class="line">&#123;</span><br><span class="line">	控制台 输出  &quot;你好！ 中文C语言编程&quot; 这句话  好了可以停止运行了</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果：<br><img src="https://img-blog.csdnimg.cn/20200402155944988.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>优秀版<br>注意前方高能！！！</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define 着 printf </span><br><span class="line">#define 唱  &#123;</span><br><span class="line">#define 跳 return 0;</span><br><span class="line">#define 鸡你太美 &#125;</span><br><span class="line">#define 喜欢 main()</span><br><span class="line">#define 蔡徐坤 int</span><br><span class="line">#define 淡黄的长裙，蓬松的头发 (&quot;你好啊C语言中文版！！ \n&quot;);</span><br><span class="line">#define 跳</span><br><span class="line">蔡徐坤 喜欢  唱 着 淡黄的长裙，蓬松的头发 跳 鸡你太美</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br><img src="https://img-blog.csdnimg.cn/20200402160536511.png" alt="在这里插入图片描述"></p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
